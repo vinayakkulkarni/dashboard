@@ -1,1 +1,0 @@
-# geospoc-dashboard
