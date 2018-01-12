@@ -18,7 +18,10 @@
           </div>
         </div>
         <div class="navbar-end">
-          <div class="navbar-item">abc</div>
+          <div class="navbar-item">
+            <button class="button is-dark" @click="setMapType('pincode'); showPincode = false" v-show="showPincode">PINCODE</button>
+            <button class="button is-dark" @click="setMapType('locality'); showPincode = true" v-show="!showPincode">LOCALITY</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -47,7 +50,19 @@ export default {
   data() {
     return {
       showNav: false,
+      showPincode: true,
     };
+  },
+  methods: {
+    setMapType(data) {
+      const t = this;
+      if (data === 'pincode') {
+        t.$emit('setMap', 'pincode');
+      }
+      if (data === 'locality') {
+        t.$emit('setMap', 'locality');
+      }
+    },
   },
 };
 </script>
