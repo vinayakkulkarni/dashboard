@@ -9,7 +9,7 @@
     "finance": 104.83,
     "education": 5.56,
     "entertainment": 13.98,
-    "pincode": 560040.0
+    "pincode": 560040
   },
   {
     "other": 15.63,
@@ -21,7 +21,7 @@
     "finance": 112.33,
     "education": 5.28,
     "entertainment": 14.98,
-    "pincode": 560022.0
+    "pincode": 560022
   },
   {
     "other": 15.58,
@@ -33,7 +33,7 @@
     "finance": 105.89,
     "education": 5.55,
     "entertainment": 14.12,
-    "pincode": 560091.0
+    "pincode": 560091
   },
   {
     "other": 15.71,
@@ -45,7 +45,7 @@
     "finance": 108.58,
     "education": 5.21,
     "entertainment": 14.48,
-    "pincode": 560096.0
+    "pincode": 560096
   },
   {
     "other": 15.05,
@@ -57,7 +57,7 @@
     "finance": 104.06,
     "education": 5.49,
     "entertainment": 13.88,
-    "pincode": 560023.0
+    "pincode": 560023
   },
   {
     "other": 17.44,
@@ -69,7 +69,7 @@
     "finance": 106.88,
     "education": 6.69,
     "entertainment": 14.25,
-    "pincode": 560104.0
+    "pincode": 560104
   },
   {
     "other": 15.27,
@@ -81,7 +81,7 @@
     "finance": 105.27,
     "education": 5.55,
     "entertainment": 14.04,
-    "pincode": 560021.0
+    "pincode": 560021
   },
   {
     "other": 15.22,
@@ -93,7 +93,7 @@
     "finance": 103.8,
     "education": 5.23,
     "entertainment": 13.84,
-    "pincode": 560110.0
+    "pincode": 560110
   },
   {
     "other": 13.28,
@@ -105,7 +105,7 @@
     "finance": 99.08,
     "education": 5.52,
     "entertainment": 13.21,
-    "pincode": 560079.0
+    "pincode": 560079
   },
   {
     "other": 15.83,
@@ -117,7 +117,7 @@
     "finance": 106.43,
     "education": 5.76,
     "entertainment": 14.19,
-    "pincode": 560072.0
+    "pincode": 560072
   },
   {
     "other": 14.19,
@@ -129,7 +129,7 @@
     "finance": 106.41,
     "education": 5.58,
     "entertainment": 14.19,
-    "pincode": 560058.0
+    "pincode": 560058
   },
   {
     "other": 14.73,
@@ -141,7 +141,7 @@
     "finance": 103.68,
     "education": 5.58,
     "entertainment": 13.82,
-    "pincode": 560086.0
+    "pincode": 560086
   },
   {
     "other": 14.82,
@@ -153,6 +153,6 @@
     "finance": 109.95,
     "education": 6.14,
     "entertainment": 14.66,
-    "pincode": 560010.0
+    "pincode": 560010
   }
 ]
