@@ -5,7 +5,7 @@
         First column
       </div>
       <div class="column">
-        Second Column
+        <leaflet-map :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" :mapType="mapType"></leaflet-map>
       </div>
     </div>
     <div class="columns is-gapless" style="background: white">
@@ -35,14 +35,20 @@
 <script>
 import Income from './Charts/Income';
 import Expenditure from './Charts/Expenditure';
+import LeafletMap from './Maps/LeafletMap';
 
 export default {
   name: 'Dashboard',
   components: {
     Income,
     Expenditure,
+    LeafletMap,
   },
   props: {
+    mapType: {
+      type: String,
+      required: true,
+    },
     expenditure: {
       type: Array,
       required: true,

@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="Site">
-    <top-navbar :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode"></top-navbar>
+    <top-navbar :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" @setMap="setMapType"></top-navbar>
     <div class="container is-fluid Site-content">
-      <router-view :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode"></router-view>
+      <router-view :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" :mapType="mapType"></router-view>
     </div>
   </div>
 </template>
@@ -25,7 +25,13 @@ export default {
       income,
       locality,
       pincode,
+      mapType: 'pincode',
     };
+  },
+  methods: {
+    setMapType(data) {
+      this.mapType = data;
+    },
   },
 };
 </script>
