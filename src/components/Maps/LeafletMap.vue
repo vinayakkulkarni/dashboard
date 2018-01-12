@@ -72,7 +72,7 @@ export default {
   methods: {
     convertGeoJson(val) {
       const t = this;
-      let dataToBeParsed = null;
+      let dataToBeParsed = t.pincode;
 
       if (val === 'pincode') {
         dataToBeParsed = t.pincode;

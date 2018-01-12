@@ -5,7 +5,7 @@
         First column
       </div>
       <div class="column">
-        <leaflet-map :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" :mapType="mapType"></leaflet-map>
+        <leaflet-map :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" :mapType.sync="mapType"></leaflet-map>
       </div>
     </div>
     <div class="columns is-gapless" style="background: white">
@@ -48,6 +48,7 @@ export default {
     mapType: {
       type: String,
       required: true,
+      default: 'pincode',
     },
     expenditure: {
       type: Array,
