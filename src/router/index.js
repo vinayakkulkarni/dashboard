@@ -8,6 +8,10 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/',
+      redirect: '/dashboard',
+    },
+    {
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard,
