@@ -9,6 +9,7 @@ import '../node_modules/leaflet/dist/leaflet.css';
 Vue.component('v-map', Vue2Leaflet.Map);
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer);
 Vue.component('v-marker', Vue2Leaflet.Marker);
+Vue.component('v-geo-json', Vue2Leaflet.GeoJSON);
 
 Vue.config.productionTip = false;
 
