@@ -2534,6 +2534,12 @@ esrecurse@^4.1.0:
     estraverse "^4.1.0"
     object-assign "^4.0.1"
 
+esri2geo@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/esri2geo/-/esri2geo-0.1.4.tgz#df577a5597d05304dae110dea7109641579a6bcd"
+  dependencies:
+    request "^2.79.0"
+
 estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
