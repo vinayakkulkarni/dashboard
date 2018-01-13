@@ -60,7 +60,7 @@
         "FID" : 0,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560001",
+        "pincode" : 560001,
         "state_name" : "Karnataka",
         "population" : 42500,
         "households" : 10625
@@ -1573,7 +1573,7 @@
         "FID" : 1,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560002",
+        "pincode" : 560002,
         "state_name" : "Karnataka",
         "population" : 61500,
         "households" : 15375
@@ -2338,7 +2338,7 @@
         "FID" : 2,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560003",
+        "pincode" : 560003,
         "state_name" : "Karnataka",
         "population" : 107500,
         "households" : 26875
@@ -3343,7 +3343,7 @@
         "FID" : 3,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560004",
+        "pincode" : 560004,
         "state_name" : "Karnataka",
         "population" : 90000,
         "households" : 22500
@@ -4588,7 +4588,7 @@
         "FID" : 4,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560009",
+        "pincode" : 560009,
         "state_name" : "Karnataka",
         "population" : 13500,
         "households" : 3375
@@ -5601,7 +5601,7 @@
         "FID" : 5,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560010",
+        "pincode" : 560010,
         "state_name" : "Karnataka",
         "population" : 184000,
         "households" : 46000
@@ -7826,7 +7826,7 @@
         "FID" : 6,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560011",
+        "pincode" : 560011,
         "state_name" : "Karnataka",
         "population" : 105000,
         "households" : 26250
@@ -9183,7 +9183,7 @@
         "FID" : 7,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560012",
+        "pincode" : 560012,
         "state_name" : "Karnataka",
         "population" : 21500,
         "households" : 5375
@@ -9876,7 +9876,7 @@
         "FID" : 8,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560018",
+        "pincode" : 560018,
         "state_name" : "Karnataka",
         "population" : 97500,
         "households" : 24375
@@ -11245,7 +11245,7 @@
         "FID" : 9,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560019",
+        "pincode" : 560019,
         "state_name" : "Karnataka",
         "population" : 44000,
         "households" : 11000
@@ -12322,7 +12322,7 @@
         "FID" : 10,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560020",
+        "pincode" : 560020,
         "state_name" : "Karnataka",
         "population" : 74000,
         "households" : 18500
@@ -13535,7 +13535,7 @@
         "FID" : 11,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560021",
+        "pincode" : 560021,
         "state_name" : "Karnataka",
         "population" : 117500,
         "households" : 29375
@@ -14620,7 +14620,7 @@
         "FID" : 12,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560022",
+        "pincode" : 560022,
         "state_name" : "Karnataka",
         "population" : 54500,
         "households" : 13625
@@ -15273,7 +15273,7 @@
         "FID" : 13,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560023",
+        "pincode" : 560023,
         "state_name" : "Karnataka",
         "population" : 276500,
         "households" : 69125
@@ -17726,7 +17726,7 @@
         "FID" : 14,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560026",
+        "pincode" : 560026,
         "state_name" : "Karnataka",
         "population" : 153500,
         "households" : 38375
@@ -19327,7 +19327,7 @@
         "FID" : 15,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560039",
+        "pincode" : 560039,
         "state_name" : "Karnataka",
         "population" : 26000,
         "households" : 6500
@@ -19812,7 +19812,7 @@
         "FID" : 16,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560040",
+        "pincode" : 560040,
         "state_name" : "Karnataka",
         "population" : 277500,
         "households" : 69375
@@ -21793,7 +21793,7 @@
         "FID" : 17,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560053",
+        "pincode" : 560053,
         "state_name" : "Karnataka",
         "population" : 79000,
         "households" : 19750
@@ -22710,7 +22710,7 @@
         "FID" : 18,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560055",
+        "pincode" : 560055,
         "state_name" : "Karnataka",
         "population" : 82500,
         "households" : 20625
@@ -23751,7 +23751,7 @@
         "FID" : 19,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560058",
+        "pincode" : 560058,
         "state_name" : "Karnataka",
         "population" : 173500,
         "households" : 43375
@@ -24980,7 +24980,7 @@
         "FID" : 20,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560079",
+        "pincode" : 560079,
         "state_name" : "Karnataka",
         "population" : 70500,
         "households" : 17625
@@ -25681,7 +25681,7 @@
         "FID" : 21,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560080",
+        "pincode" : 560080,
         "state_name" : "Karnataka",
         "population" : 55000,
         "households" : 13750
@@ -26414,7 +26414,7 @@
         "FID" : 22,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560086",
+        "pincode" : 560086,
         "state_name" : "Karnataka",
         "population" : 186500,
         "households" : 46625
@@ -27835,7 +27835,7 @@
         "FID" : 23,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560091",
+        "pincode" : 560091,
         "state_name" : "Karnataka",
         "population" : 531000,
         "households" : 132750
@@ -30352,7 +30352,7 @@
         "FID" : 24,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560096",
+        "pincode" : 560096,
         "state_name" : "Karnataka",
         "population" : 145500,
         "households" : 36375
@@ -31217,7 +31217,7 @@
         "FID" : 25,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560104",
+        "pincode" : 560104,
         "state_name" : "Karnataka",
         "population" : 19500,
         "households" : 4875
@@ -31646,7 +31646,7 @@
         "FID" : 26,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560072",
+        "pincode" : 560072,
         "state_name" : "Karnataka",
         "population" : 298500,
         "households" : 74625
@@ -34747,7 +34747,7 @@
         "FID" : 27,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560056",
+        "pincode" : 560056,
         "state_name" : "Karnataka",
         "population" : 296500,
         "households" : 74125
@@ -36780,7 +36780,7 @@
         "FID" : 28,
         "district_c" : "572",
         "district_n" : "Bangalore",
-        "pincode" : "560110",
+        "pincode" : 560110,
         "state_name" : "Karnataka",
         "population" : 151000,
         "households" : 37750
