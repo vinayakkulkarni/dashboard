@@ -5,21 +5,31 @@ export default {
   name: 'Income',
   extends: Doughnut,
   props: {
-    expenditure: {
-      type: Array,
-      required: true,
-    },
     income: {
-      type: Array,
-      required: true,
-    },
-    locality: {
       type: Object,
       required: true,
     },
-    pincode: {
-      type: Object,
-      required: true,
+  },
+  watch: {
+    income(val, oldVal) {
+      const t = this;
+      const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+      };
+      const data = {
+        labels: [t.income.locality],
+        datasets: [
+          {
+            fill: false,
+            backgroundColor: ['#A6D9EC', '#47A8DD'],
+            data: [t.income.income],
+          },
+        ],
+      };
+      if (val !== oldVal) {
+        t.renderChart(data, options);
+      }
     },
   },
   mounted() {
@@ -29,12 +39,12 @@ export default {
       maintainAspectRatio: false,
     };
     const data = {
-      labels: ['income'],
+      labels: [t.income.locality],
       datasets: [
         {
           fill: false,
           backgroundColor: ['#A6D9EC', '#47A8DD'],
-          data: [t.income[0].income, t.income[1].income],
+          data: [t.income.income],
         },
       ],
     };

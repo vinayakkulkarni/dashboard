@@ -6,74 +6,72 @@ export default {
   extends: Bar,
   props: {
     expenditure: {
-      type: Array,
-      required: true,
-    },
-    income: {
-      type: Array,
-      required: true,
-    },
-    locality: {
-      type: Object,
-      required: true,
-    },
-    pincode: {
       type: Object,
       required: true,
     },
   },
-  mounted() {
-    const t = this;
-    const data = {
-      labels: [
-        'apparel',
-        'education',
-        'entertainment',
-        'finance',
-        'food',
-        'health',
-        'house',
-        'other',
-        'transport',
-      ],
-      datasets: [
-        {
-          label: 'Expenditure',
-          backgroundColor: '#47A8DD',
-          data: [
-            t.expenditure[0].apparel,
-            t.expenditure[0].education,
-            t.expenditure[0].entertainment,
-            t.expenditure[0].finance,
-            t.expenditure[0].food,
-            t.expenditure[0].health,
-            t.expenditure[0].house,
-            t.expenditure[0].other,
-            t.expenditure[0].teansport,
-          ],
-        },
-      ],
-    };
-    const options = {
-      scales: {
-        xAxes: [
-          {
-            barThickness: 70,
-          },
+  watch: {
+    expenditure(val, oldVal) {
+      if (val !== oldVal) {
+        this.renderChart(this.expenditure, this.options);
+      }
+    },
+  },
+  data() {
+    return {
+      chartData: {
+        labels: [
+          'apparel',
+          'education',
+          'entertainment',
+          'finance',
+          'food',
+          'health',
+          'house',
+          'other',
+          'transport',
         ],
-        yAxes: [
+        datasets: [
           {
-            scaleLabel: {
-              display: true,
-              labelString: 'Total expenditure in lakhs',
-            },
+            label: 'Expenditure',
+            backgroundColor: '#47A8DD',
+            data: [
+              this.expenditure.apparel,
+              this.expenditure.education,
+              this.expenditure.entertainment,
+              this.expenditure.finance,
+              this.expenditure.food,
+              this.expenditure.health,
+              this.expenditure.house,
+              this.expenditure.other,
+              this.expenditure.teansport,
+            ],
           },
         ],
       },
-      responsive: true,
-      maintainAspectRatio: false,
+      options: {
+        scales: {
+          xAxes: [
+            {
+              barThickness: 70,
+            },
+          ],
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: 'Total expenditure in lakhs',
+              },
+            },
+          ],
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+      },
     };
-    this.renderChart(data, options);
+  },
+  mounted() {
+    this.renderChart(this.chartData, this.options);
   },
 };
 </script>
