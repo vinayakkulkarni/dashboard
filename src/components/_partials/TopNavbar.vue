@@ -1,5 +1,5 @@
 <template>
-   <nav class="navbar is-info is-fixed-top">
+   <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           <i class="arrow icon"></i>
@@ -14,13 +14,23 @@
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-start">
           <div class="navbar-item">
-            <div style="font-size: 24px;">Individual PIN Code report for 1938197</div>
+            <div class="columns is-mobile is-multiline is-centered">
+              <div class="column is-narrow">
+                <div class="is-size-2">Report</div>
+                <div v-if="feature.hasOwnProperty('locality_i')">Locality ID {{ feature.locality_i }} </div>
+                <div v-if="feature.hasOwnProperty('pincode')">Individual pin code report for {{ feature.pincode }} </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
-            <button class="button is-dark" @click="setMapType('pincode'); showPincode = false" v-show="showPincode">PINCODE</button>
-            <button class="button is-dark" @click="setMapType('locality'); showPincode = true" v-show="!showPincode">LOCALITY</button>
+            <div class="columns is-mobile is-multiline is-centered">
+              <div class="column is-narrow">
+                <button class="button is-dark" @click="setMapType('pincode'); showPincode = false" v-show="showPincode">PINCODE</button>
+                <button class="button is-dark" @click="setMapType('locality'); showPincode = true" v-show="!showPincode">LOCALITY</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,21 +40,14 @@
 export default {
   name: 'TopNavbar',
   props: {
-    expenditure: {
-      type: Array,
-      required: true,
-    },
-    income: {
-      type: Array,
-      required: true,
-    },
-    locality: {
+    feature: {
       type: Object,
-      required: true,
     },
-    pincode: {
+    filteredIncome: {
       type: Object,
-      required: true,
+    },
+    filteredExpenditure: {
+      type: Object,
     },
   },
   data() {
