@@ -1,18 +1,28 @@
 <template>
   <div id="app" class="Site">
-    <top-navbar :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" @setMap="setMapType"></top-navbar>
+    <top-navbar :feature="feature" :filteredIncome="filteredIncome" :filteredExpenditure="filteredExpenditure" @setMap="setMapType"></top-navbar>
     <div class="container is-fluid Site-content">
-      <router-view :expenditure="expenditure" :income="income" :locality="locality" :pincode="pincode" :mapType="mapType"></router-view>
+      <router-view 
+      :expenditure="expenditure" 
+      :income="income" 
+      :locality="locality" 
+      :pincode="pincode" 
+      :mapType="mapType"
+      :feature="feature"
+      :filteredIncome="filteredIncome"
+      :filteredExpenditure="filteredExpenditure"></router-view>
     </div>
   </div>
 </template>
 
 <script>
+import _ from 'lodash';
 import expenditure from './data/expenditure.json';
 import income from './data/income.json';
 import locality from './data/locality.json';
 import pincode from './data/pincode.json';
 import TopNavbar from './components/_partials/TopNavbar';
+import EventBus from './components/event-bus';
 
 export default {
   name: 'app',
@@ -26,11 +36,32 @@ export default {
       locality,
       pincode,
       mapType: 'pincode',
+      feature: {},
+      filteredExpenditure: {},
+      filteredIncome: {},
     };
+  },
+  created() {
+    const t = this;
+    EventBus.$on('selected-feature', (data) => {
+      t.feature = data;
+      t.filterExpenditure();
+      t.filterIncome();
+    });
   },
   methods: {
     setMapType(data) {
       this.mapType = data;
+    },
+    filterExpenditure() {
+      const t = this;
+      t.filteredExpenditure =
+        _.find(t.expenditure, data => data.pincode === t.feature.pincode) || {};
+    },
+    filterIncome() {
+      const t = this;
+      t.filteredIncome =
+        _.find(t.income, data => data.locality === t.feature.locality) || {};
     },
   },
 };
@@ -47,6 +78,5 @@ body {
 }
 .Site-content {
   flex: 1;
-  margin-top: 52px;
 }
 </style>
