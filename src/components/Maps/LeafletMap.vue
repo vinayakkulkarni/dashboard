@@ -2,7 +2,7 @@
   <span>
     <v-map style="height: 100%; min-height: 100px; width: auto; padding: 200px;" :zoom="zoom" :center="center">
       <v-tilelayer :url="url" :attribution="attribution"></v-tilelayer>
-      <v-geo-json v-if="show" :geojson="geojson" :options="options"></v-geo-json>
+      <v-geo-json :geojson="geojson" :options="options"></v-geo-json>
     </v-map>
   </span>
 </template>
@@ -15,7 +15,7 @@ import PopupContent from './_partials/PopupContent';
 function onEachFeature(feature, layer) {
   const Content = Vue.extend(PopupContent);
   const popup = new Content({
-    propsData: { data: { type: feature.type, color: 'blue' } },
+    propsData: { feature },
   });
   layer.bindPopup(popup.$mount().$el);
 }
@@ -27,14 +27,6 @@ export default {
       type: String,
       required: true,
       default: 'pincode',
-    },
-    expenditure: {
-      type: Array,
-      required: true,
-    },
-    income: {
-      type: Array,
-      required: true,
     },
     locality: {
       type: Object,
