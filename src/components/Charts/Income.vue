@@ -10,14 +10,28 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+      chartData: {
+        labels: [this.income.locality],
+        datasets: [
+          {
+            fill: false,
+            backgroundColor: ['#A6D9EC', '#47A8DD'],
+            data: [this.income.income],
+          },
+        ],
+      },
+    };
+  },
   watch: {
     income(val, oldVal) {
       const t = this;
-      const options = {
-        responsive: true,
-        maintainAspectRatio: false,
-      };
-      const data = {
+      const chartData = {
         labels: [t.income.locality],
         datasets: [
           {
@@ -27,28 +41,16 @@ export default {
           },
         ],
       };
+      /* eslint no-underscore-dangle: 0 */
       if (val !== oldVal) {
-        t.renderChart(data, options);
+        t.$data._chart.destroy();
+        t.renderChart(chartData, t.options);
       }
     },
   },
   mounted() {
     const t = this;
-    const options = {
-      responsive: true,
-      maintainAspectRatio: false,
-    };
-    const data = {
-      labels: [t.income.locality],
-      datasets: [
-        {
-          fill: false,
-          backgroundColor: ['#A6D9EC', '#47A8DD'],
-          data: [t.income.income],
-        },
-      ],
-    };
-    this.renderChart(data, options);
+    this.renderChart(t.chartData, t.options);
   },
 };
 </script>
