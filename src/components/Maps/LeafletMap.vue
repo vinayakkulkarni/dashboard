@@ -45,9 +45,7 @@ export default {
       show: true,
       zoom: 12,
       center: [12.9716, 77.5946],
-      geojson: esri2geo(this.pincode, (err, data) => {
-        this.geojson = data;
-      }),
+      geojson: esri2geo(this.pincode, data => data),
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
