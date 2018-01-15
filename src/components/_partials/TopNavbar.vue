@@ -16,7 +16,7 @@
           <div class="navbar-item">
             <div class="columns is-mobile is-multiline is-centered">
               <div class="column is-narrow">
-                <div class="is-size-2">Report</div>
+                <div class="is-size-2"><span class="icon"><icon name="file" scale="2"></icon></span> Report</div>
                 <div v-if="feature.hasOwnProperty('locality_i')">Locality ID {{ feature.locality_i }} </div>
                 <div v-if="feature.hasOwnProperty('pincode')">Individual pin code report for {{ feature.pincode }} </div>
               </div>
