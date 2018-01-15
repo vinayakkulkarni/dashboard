@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import _ from 'lodash';
 import expenditure from './data/expenditure.json';
 import income from './data/income.json';
 import locality from './data/locality.json';
@@ -56,12 +55,12 @@ export default {
     filterExpenditure() {
       const t = this;
       t.filteredExpenditure =
-        _.find(t.expenditure, data => data.pincode === t.feature.pincode) || {};
+        t.expenditure.find(data => data.pincode === t.feature.pincode) || {};
     },
     filterIncome() {
       const t = this;
       t.filteredIncome =
-        _.find(t.income, data => data.locality === t.feature.locality) || {};
+        t.income.find(data => data.locality === t.feature.locality) || {};
     },
   },
 };
