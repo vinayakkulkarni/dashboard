@@ -12,8 +12,41 @@ export default {
   },
   watch: {
     expenditure(val, oldVal) {
+      const t = this;
+      const chartData = {
+        labels: [
+          'apparel',
+          'education',
+          'entertainment',
+          'finance',
+          'food',
+          'health',
+          'house',
+          'other',
+          'transport',
+        ],
+        datasets: [
+          {
+            label: `Expenditure for ${t.expenditure.pincode}`,
+            backgroundColor: '#47A8DD',
+            data: [
+              t.expenditure.apparel,
+              t.expenditure.education,
+              t.expenditure.entertainment,
+              t.expenditure.finance,
+              t.expenditure.food,
+              t.expenditure.health,
+              t.expenditure.house,
+              t.expenditure.other,
+              t.expenditure.teansport,
+            ],
+          },
+        ],
+      };
+      /* eslint no-underscore-dangle: 0 */
       if (val !== oldVal) {
-        this.renderChart(this.expenditure, this.options);
+        t.$data._chart.destroy();
+        t.renderChart(chartData, t.options);
       }
     },
   },
@@ -33,7 +66,7 @@ export default {
         ],
         datasets: [
           {
-            label: 'Expenditure',
+            label: `Expenditure for ${this.expenditure.pincode}`,
             backgroundColor: '#47A8DD',
             data: [
               this.expenditure.apparel,
@@ -71,7 +104,8 @@ export default {
     };
   },
   mounted() {
-    this.renderChart(this.chartData, this.options);
+    const t = this;
+    this.renderChart(t.chartData, t.options);
   },
 };
 </script>
