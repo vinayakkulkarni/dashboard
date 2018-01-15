@@ -9,8 +9,8 @@
       :pincode="pincode" 
       :mapType="mapType"
       :feature="feature"
-      :filteredIncome="filteredIncome"
-      :filteredExpenditure="filteredExpenditure"></router-view>
+      :filteredIncome.sync="filteredIncome"
+      :filteredExpenditure.sync="filteredExpenditure"></router-view>
     </div>
   </div>
 </template>
