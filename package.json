@@ -19,6 +19,7 @@
     "leaflet": "^1.2.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
+    "v-offline": "^1.0.4",
     "vue": "^2.5.2",
     "vue-awesome": "^2.3.4",
     "vue-chartjs": "^3.0.2",

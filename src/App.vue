@@ -1,21 +1,27 @@
 <template>
-  <div id="app" class="Site">
-    <top-navbar :feature="feature" :filteredIncome="filteredIncome" :filteredExpenditure="filteredExpenditure" @setMap="setMapType"></top-navbar>
-    <div class="container is-fluid Site-content">
-      <router-view 
-      :expenditure="expenditure" 
-      :income="income" 
-      :locality="locality" 
-      :pincode="pincode" 
-      :mapType="mapType"
-      :feature="feature"
-      :filteredIncome.sync="filteredIncome"
-      :filteredExpenditure.sync="filteredExpenditure"></router-view>
+  <network-status @detected-condition="detected" id="app" class="Site">
+    <div slot="online">
+      <top-navbar :feature="feature" :filteredIncome="filteredIncome" :filteredExpenditure="filteredExpenditure" @setMap="setMapType"></top-navbar>
+      <div class="container is-fluid Site-content">
+        <router-view 
+        :expenditure="expenditure" 
+        :income="income" 
+        :locality="locality" 
+        :pincode="pincode" 
+        :mapType="mapType"
+        :feature="feature"
+        :filteredIncome.sync="filteredIncome"
+        :filteredExpenditure.sync="filteredExpenditure"></router-view>
+      </div>
     </div>
-  </div>
+    <div slot="offline" offlineClass="container is-fluid Site-content">
+      You're Offline!
+    </div>
+  </network-status>
 </template>
 
 <script>
+import NetworkStatus from 'v-offline';
 import expenditure from './data/expenditure.json';
 import income from './data/income.json';
 import locality from './data/locality.json';
@@ -27,9 +33,11 @@ export default {
   name: 'app',
   components: {
     TopNavbar,
+    NetworkStatus,
   },
   data() {
     return {
+      state: null,
       expenditure,
       income,
       locality,
@@ -49,6 +57,9 @@ export default {
     });
   },
   methods: {
+    detected(e) {
+      this.state = e;
+    },
     setMapType(data) {
       this.mapType = data;
     },
