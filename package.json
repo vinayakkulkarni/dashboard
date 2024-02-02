@@ -17,7 +17,7 @@
     "chart.js": "^2.7.1",
     "esri2geo": "^0.1.4",
     "leaflet": "^1.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.6",
     "v-offline": "^1.0.4",
     "vue": "^2.5.2",
